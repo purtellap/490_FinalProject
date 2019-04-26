@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">FinalProject</string>
+    <string name="app_name">CryptoCurrency Tracker</string>
+    <string name="tab_all">All</string>
+    <string name="tab_favs">Favorites</string>
+    <string name="tab_src">Search</string>
+    <string name="name">Name</string>
+    <string name="symbol">Symbol</string>
+    <string name="favorite">Favorite</string>
+    <string name="searchHint">Search CryptoCurrencies</string>
+    <string name="popPrice">Price</string>
+    <string name="popChange">Change</string>
+    <string name="popMarket">Mkt. Cap</string>
 </resources>

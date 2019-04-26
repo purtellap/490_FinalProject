@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.SearchView
+
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_height"
+        android:layout_marginBottom="@dimen/pad16"
+        app:iconifiedByDefault="false"
+        app:queryHint="@string/searchHint"
+        android:background="@color/almostwhite"
+        android:elevation="2dp"
+        app:queryBackground="@android:color/transparent"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="@dimen/list_height"
+        android:id="@+id/recycler_view3"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

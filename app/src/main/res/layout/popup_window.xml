@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/almostwhite"
+        android:layout_margin="4dp"
+        android:elevation="4dp"
+        >
+
+        <TextView
+            android:id="@+id/pop_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pad16"
+            android:textSize="25sp"
+            android:textColor="@color/textColor"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textAlignment="viewStart"
+            />
+
+        <TextView
+            android:id="@+id/pop_rank"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pad16"
+            android:textSize="25sp"
+            android:textColor="@color/textColor"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textAlignment="viewEnd"
+            />
+
+        <View
+            android:id="@+id/hr"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"
+            android:layout_below="@+id/pop_title"
+            />
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hr"
+            android:padding="@dimen/pad16"
+            >
+
+            <TextView
+                android:id="@+id/pop_price_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:textStyle="italic"
+                android:text="@string/popPrice"
+                android:textSize="25sp"
+                android:textColor="@color/textColor"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textAlignment="viewStart"
+                />
+            <TextView
+                android:id="@+id/pop_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:textSize="25sp"
+                android:textColor="@color/textColor"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textAlignment="viewEnd"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line1"
+            android:padding="@dimen/pad16"
+            >
+
+            <TextView
+                android:id="@+id/pop_change_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".75"
+                android:textStyle="italic"
+                android:text="@string/popChange"
+                android:textSize="25sp"
+                android:textColor="@color/textColor"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textAlignment="viewStart"
+                />
+            <TextView
+                android:id="@+id/pop_change"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.25"
+                android:textSize="25sp"
+                android:textColor="@color/textColor"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textAlignment="viewEnd"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line2"
+            android:padding="@dimen/pad16"
+            >
+
+            <TextView
+                android:id="@+id/pop_market_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".75"
+                android:textStyle="italic"
+                android:text="@string/popMarket"
+                android:textSize="25sp"
+                android:textColor="@color/textColor"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textAlignment="viewStart"
+                />
+            <TextView
+                android:id="@+id/pop_market"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.25"
+                android:textSize="25sp"
+                android:textColor="@color/textColor"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textAlignment="viewEnd"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
