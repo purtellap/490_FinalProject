@@ -2,15 +2,18 @@ package com.austin.finalproject;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import java.io.FileNotFoundException;
@@ -27,6 +30,19 @@ public class Tab1Fragment extends Fragment {
         async.execute();
 
         return view;
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+
+        if (isVisibleToUser){
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            if (Build.VERSION.SDK_INT >= 26) {
+                ft.setReorderingAllowed(false);
+            }
+            ft.detach(this).attach(this).commit();
+        }
     }
 
     static class AllAsync extends AsyncTask<Void, Void, CryptoList> {
@@ -78,6 +94,9 @@ public class Tab1Fragment extends Fragment {
 
                 mAdapter = new RecyclerAdapter(cryptoList.getCoinList());
                 recyclerView.setAdapter(mAdapter);
+
+                ProgressBar spinner = (ProgressBar)view.findViewById(R.id.progressBar);
+                spinner.setVisibility(View.GONE);
             }
         }
 

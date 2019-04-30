@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "863606860887",
+    "firebase_url": "https://cryptocurrency-7a214.firebaseio.com",
+    "project_id": "cryptocurrency-7a214",
+    "storage_bucket": "cryptocurrency-7a214.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863606860887:android:2fea15becb1805e5",
+        "android_client_info": {
+          "package_name": "com.austin.finalproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "863606860887-gokh44jne1gc1pgv4qbesdki9867stj0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.austin.finalproject",
+            "certificate_hash": "a8717afb5bacb82a949542d3eeaf1f82908f060f"
+          }
+        },
+        {
+          "client_id": "863606860887-s4kifur5av0iqpdopb6qo2vifn1tveul.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBusZS8ljZ9Qin_hfXiiWh6upiIcwJWDF8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "863606860887-s4kifur5av0iqpdopb6qo2vifn1tveul.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

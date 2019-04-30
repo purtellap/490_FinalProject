@@ -1,17 +1,21 @@
 package com.austin.finalproject;
 
+import android.arch.persistence.room.Room;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import java.io.FileNotFoundException;
+import com.austin.finalproject.db.Favorite;
+import com.austin.finalproject.db.LabDatabase;
+import com.google.firebase.FirebaseApp;
+
+import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,8 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
     private ViewPager mViewPager;
 
+    public static LabDatabase cryptoDB;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        FirebaseApp.initializeApp(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate: Starting.");
@@ -36,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+
+        cryptoDB = Room.databaseBuilder(this, LabDatabase.class, "cryptoDB").build();
+
 
     }
 

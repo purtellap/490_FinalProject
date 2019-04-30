@@ -13,35 +13,44 @@
         android:elevation="4dp"
         >
 
-        <TextView
-            android:id="@+id/pop_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/pad16"
-            android:textSize="25sp"
-            android:textColor="@color/textColor"
-            android:fontFamily="sans-serif-condensed-light"
-            android:textAlignment="viewStart"
-            />
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/pop_rank"
-            android:layout_alignParentEnd="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/pad16"
-            android:textSize="25sp"
-            android:textColor="@color/textColor"
-            android:fontFamily="sans-serif-condensed-light"
-            android:textAlignment="viewEnd"
-            />
+            <TextView
+                android:id="@+id/pop_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/pad16"
+                android:textSize="25sp"
+                android:textColor="@color/textColor"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textAlignment="viewStart"
+                />
+
+            <TextView
+                android:id="@+id/pop_rank"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="@dimen/pad16"
+                android:textSize="25sp"
+                android:textColor="@color/textColor"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textAlignment="viewEnd"
+                />
+
+
+        </LinearLayout>
 
         <View
             android:id="@+id/hr"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/colorPrimary"
-            android:layout_below="@+id/pop_title"
+            android:layout_below="@+id/header"
             />
 
         <LinearLayout
